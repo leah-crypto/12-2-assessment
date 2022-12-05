@@ -42,6 +42,19 @@ module.exports = {
     res.status(200).send(randomAdvice);
   },
 
+  getLucky: (req, res) => {
+    const luck = [
+        "99, 20, 7, 88, 30",
+        "102, 6, 35, 20, 53",
+        "43, 86, 29, 14, 12",
+    ];
+
+    let randomIndex4 = Math.floor(Math.random() * luck.length);
+    let randomNums = luck[randomIndex4];
+
+    res.status(200).send(randomNums);
+  },
+
   getGoal: (req, res) => {
     res.status(200).send(goals);
   },

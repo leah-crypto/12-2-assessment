@@ -14,6 +14,7 @@ let books = [];
 const { getCompliment,
         getFortune,
         getAdvice,
+        getLucky,
         getGoal,
         deleteGoal,
         createGoal,
@@ -36,6 +37,7 @@ app.get(`/books`, (req, res) =>{
 app.get(`/api/fortune`, getFortune);
 app.get(`/api/compliment`, getCompliment);
 app.get(`/api/advice`, getAdvice);
+app.get(`/api/luck/`, getLucky);
 app.get(`/api/goal`, getGoal);
 app.delete(`/api/goal/:id`, deleteGoal);
 app.put(`/api/goal/:id`, updateGoal);

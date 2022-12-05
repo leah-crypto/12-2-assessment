@@ -3,7 +3,7 @@ const fortuneBtn = document.getElementById("fortuneButton");
 const adviceBtn = document.getElementById("adviceButton");
 const goalContainer = document.querySelector('#goal-container')
 const form = document.querySelector('form')
-const luckyBtn = document.querySelector("luckyNumbersButton");
+const luckyBtn = document.getElementById("luckyButton");
 
 const baseURL = `http://localhost:4000/api/goal`
 
@@ -134,6 +134,15 @@ const getAdvice = () => {
     });
 };
 
+const getLucky = () => {
+    axios.get("http://localhost:4000/api/luck/")
+    .then(res => {
+        const data4 = res.data;
+        alert(data4);
+    });
+};
+
+luckyBtn.addEventListener('click', getLucky);
 adviceBtn.addEventListener('click', getAdvice);
 fortuneBtn.addEventListener('click', getFortune);
 complimentBtn.addEventListener('click', getCompliment);
