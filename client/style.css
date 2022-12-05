@@ -13,7 +13,7 @@
     display: flex; 
     justify-content: center; 
     align-items: center;
-    color: darkslategray;
+    color: rgb(29, 223, 223);
   }
   
   main {
@@ -24,7 +24,7 @@
   form {
     width: 350px;
     height: 350px;
-    background-color: darkslategray;
+    background-color: rgb(49, 32, 141);
     position: relative;
     display: flex; 
     flex-direction: column;
@@ -37,7 +37,7 @@
     background-color: #232323;
     width: 75px;
     height: 25px;
-    color: turquoise;
+    color: rgb(108, 153, 219);
     border: none;
     margin: 5px;
   }
@@ -51,9 +51,6 @@
     background-color: snow;
   }
   
-  #price-container {
-    width: 85%;
-  }
   
   #radio-container {
     width: 100%;
@@ -61,22 +58,8 @@
     justify-content: space-around;
     align-items: center;
   }
-  
-  #houses-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .house-cover-image {
-    width: 300px; 
-    height: 300px;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-  }
-  
-  .house-card {
+
+  .goal-card {
     background-color: turquoise;
     width: 300px;
     margin: 20px; 
@@ -88,15 +71,11 @@
     border-top-right-radius: 15px;
   }
   
-  .house-address {
+  .goal-date {
     font-size: 18px;
     margin: 5px 0;
   }
   
-  .house-price {
-    font-size: 15px;
-    margin: 5px 0;
-  }
   
   .btns-container {
     width: 100%; 

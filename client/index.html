@@ -2,36 +2,97 @@
 <html>
   <head>
     <title>Back End Assessment</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="container">
     <button id="complimentButton">Get a compliment</button>
-    <button id= "fortuneButton">Get a Fortune</button>
-    <button id ="adviceButton">Get some advice!</button>
-    <main>
+    <button id="fortuneButton">Get a Fortune</button>
+    <button id="adviceButton">Get some advice!</button>
 
-      <form>
-          <input 
-              type='text'
-              id="goal"
-              placeholder="Add goal to meet"/>
-          <input 
-              type='text'
-              id="date"
-              placeholder='Date to meet goal by?'/>
-          <input 
-              type='text'
-              id="img"
-              placeholder='Paste an image URL'/>
-          <button>add goal</button>
+    <br />
+    <br />
+
+    <div class="container">
+      <hr />
+      <h1>Create list of books you would like to read!</h1>
+      <hr />
+
+      <form action="http://localhost:4000/book" method="POST">
+        <div class="form-group">
+          <label for="author">Author</label>
+          <input class="form-control" name="author" />
+        </div>
+
+        <div class="form-group">
+          <label for="Title">Title</label>
+          <input class="form-control" name="title" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
-  
+    </div>
+
+    <br />
+    <br />
+
+    <div class="container">
+      <hr />
+      <h1>Your list of books</h1>
+      <hr />
+      <div>
+        <div class="row" id="books"></div>
+      </div>
+    </div>
+
+    <div id="editBookModal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Book</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <form id="editForm" method="POST">
+              <div class="form-group">
+                <label for="Author">Author</label>
+                <input class="form-control" name="isbn" id="isbn" />
+              </div>
+
+              <div class="form-group">
+                <label for="Title">Title</label>
+                <input class="form-control" name="title" id="title" />
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <main>
+      <form>
+        <input type="text" id="goal" placeholder="Add goal to meet" />
+        <input type="text" id="date" placeholder="Date to meet goal by?" />
+        <input type="text" id="img" placeholder="Paste an image URL" />
+        <button>add goal</button>
+      </form>
+
       <section id="goals-container"></section>
-  
-      </main>
+    </main>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
-    
   </body>
 </html>
